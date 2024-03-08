@@ -4,17 +4,11 @@ import (
 	"context"
 	"io"
 	"net/http"
-	"time"
 )
 
 const (
     BaseEndpoint string = "https://api.mexc.com"
 )
-
-type (
-    TimeStamp int64
-)
-
 
 type Client struct {
     apiKey          string
@@ -44,8 +38,4 @@ func (c *Client) callApi(ctx context.Context, req *http.Request) ([]byte, error)
     defer res.Body.Close()
 
     return io.ReadAll(res.Body)
-}
-
-func (t TimeStamp) ToTime() time.Time {
-    return time.UnixMilli(int64(t))
 }
