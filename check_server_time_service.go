@@ -4,11 +4,10 @@ import (
 	"context"
 	"encoding/json"
 	"net/http"
-	"time"
 )
 
 type CheckServerTimeResponse struct {
-    ServerTime int64 `json:"serverTime"`
+    ServerTime TimeStamp `json:"serverTime"`
 }
 
 
@@ -42,8 +41,4 @@ func (c CheckServerTimeService) Do(ctx context.Context) (*CheckServerTimeRespons
     }
 
     return &target, nil
-}
-
-func (c CheckServerTimeResponse) ToTime() time.Time {
-    return time.UnixMilli(c.ServerTime)
 }
