@@ -10,6 +10,11 @@ const (
     BaseEndpoint string = "https://api.mexc.com"
 )
 
+type ExtraResponse struct {
+    Msg     string  `json:"msg"`
+    Code    Code    `json:"code"`
+}
+
 type Client struct {
     apiKey          string
     secretKey       string

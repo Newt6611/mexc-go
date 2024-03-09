@@ -17,7 +17,7 @@ type Symbol struct {
 	QuoteAssetPrecision         int         `json:"quoteAssetPrecision"`
 	BaseCommissionPrecision     int         `json:"baseCommissionPrecision"`
 	QuoteCommissionPrecision    int         `json:"quoteCommissionPrecision"`
-	OrderTypes                  []string    `json:"orderTypes"`
+	OrderTypes                  []OrderType `json:"orderTypes"`
 	IsSpotTradingAllowed        bool        `json:"isSpotTradingAllowed"`
 	IsMarginTradingAllowed      bool        `json:"isMarginTradingAllowed"`
 	QuoteAmountPrecision        string      `json:"quoteAmountPrecision"`

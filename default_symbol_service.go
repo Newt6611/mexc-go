@@ -8,7 +8,7 @@ import (
 
 
 type DefaultSymbolResponse struct {
-    Code        int         `json:"code"`
+    Code        Code        `json:"code"`
     Data        []string    `json:"data"`
     Msg         string      `json:"msg"`
     TimeStamp   TimeStamp   `json:"timestamp"`
